@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    
+    @State var i = ["feed the pug", "sleep", "eat", "why"]
+var body: some View {
+     
+    List{
+        ForEach(0..<i.count,id: \.self){index in Text(i[index])
         }
+           }
     }
 }
